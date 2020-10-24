@@ -52,9 +52,7 @@ class SpiderChartPainter extends CustomPainter {
   final List<String> labels;
   final decimalPrecision;
 
-  final Paint spokes = Paint()
-    ..color = Colors.grey
-    ..strokeWidth = 8.0;
+  final Paint spokes = Paint()..color = Colors.grey;
 
   final Paint fill = Paint()
     ..color = Color.fromARGB(15, 50, 50, 50)
@@ -62,7 +60,8 @@ class SpiderChartPainter extends CustomPainter {
 
   final Paint stroke = Paint()
     ..color = Color.fromARGB(255, 50, 50, 50)
-    ..style = PaintingStyle.stroke;
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 8.0;
 
   SpiderChartPainter(this.data, this.maxNumber, this.colors, this.labels,
       this.decimalPrecision);
