@@ -160,7 +160,7 @@ class SpiderChartPainter extends CustomPainter {
         TextStyle(color: Colors.grey.shade600, fontWeight: FontWeight.bold);
 
     for (var i = 0; i < points.length; i++) {
-      textPainter.text = TextSpan(text: labels[i], style: textStyle);
+      textPainter.text = TextSpan(text: '', style: textStyle);
       textPainter.layout();
       if (points[i].dx < center.dx) {
         textPainter.paint(
