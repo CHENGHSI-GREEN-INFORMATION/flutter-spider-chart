@@ -122,7 +122,7 @@ class SpiderChartPainter extends CustomPainter {
     for (var i = 0; i < points.length; i++) {
       String s = data[i].toStringAsFixed(decimalPrecision);
       textPainter.text =
-          TextSpan(text: s, style: TextStyle(color: Colors.black));
+          TextSpan(text: '', style: TextStyle(color: Colors.black));
       textPainter.layout();
       if (points[i].dx < center.dx) {
         textPainter.paint(
@@ -160,7 +160,7 @@ class SpiderChartPainter extends CustomPainter {
         TextStyle(color: Colors.grey.shade600, fontWeight: FontWeight.bold);
 
     for (var i = 0; i < points.length; i++) {
-      textPainter.text = TextSpan(text: '', style: textStyle);
+      textPainter.text = TextSpan(text: labels[i], style: textStyle);
       textPainter.layout();
       if (points[i].dx < center.dx) {
         textPainter.paint(
